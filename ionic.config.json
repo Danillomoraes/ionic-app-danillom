@@ -1,0 +1,7 @@
+{
+  "name": "ionic-app-danillom",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
