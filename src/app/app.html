@@ -1,14 +1,33 @@
 <ion-menu [content]="content">
-
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Pages</ion-title>
-    </ion-toolbar>
+    <!--<ion-grid>
+      <ion-row>
+        <ion-col col-12>This column take 12 colluns</ion-col>
+      </ion-row>
+    </ion-grid> -->
+    <div class="menuHeader">
+      <img class="imgMenuHeader" src="http://coolalbumreview.com/wp-content/uploads/2012/01/wilson.jpg" />
+      <div class="divMenu">
+        <div class="avatarMenuHeader">
+          <img class="imgAvatar" src="https://i.pinimg.com/originals/8d/75/1b/8d751b24ca1bb30aed320b0e62f9b6f7.jpg"  />
+        </div>
+        <div class="divMenuLabel">
+          <p class="lbMenu lbName">
+            <strong>
+              Ann Wilson
+            </strong>
+          </p>
+          <p class="lbMenu lbThin">
+            ann.wilson@outlook.com
+          </p>
+        </div>
+      </div>
+    </div>
   </ion-header>
-
   <ion-content>
     <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button ion-item *ngFor="let p of pintos">
+        <ion-icon name={{p.icon}}></ion-icon>
         {{p.title}}
       </button>
     </ion-list>

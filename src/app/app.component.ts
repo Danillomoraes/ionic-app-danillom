@@ -3,7 +3,9 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
+import { MainPage } from '../pages/main/main';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -15,8 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
+  rootPage = LoginPage;
   // make HelloIonicPage the root (or first) page
-  rootPage = HelloIonicPage;
   pages: Array<{title: string, component: any}>;
 
   constructor(
@@ -31,6 +33,12 @@ export class MyApp {
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage }
+    ];
+
+    this.pintos = [
+      {title: 'Cerveja', icon: 'beer'},
+      {title: 'Dinheiro', icon: 'logo-bitcoin'},
+      {title: 'Caneca', icon:'cafe'}
     ];
   }
 

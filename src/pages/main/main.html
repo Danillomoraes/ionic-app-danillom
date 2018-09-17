@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar class="bar-assertive">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>App do Danillom</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="mainContent" padding>
+  <ion-card *ngFor="let f of feeds">
+    <img src="{{f.img}}" />
+    <ion-card-content>
+      <ion-card-title>{{f.title}}</ion-card-title>
+      <p>
+        {{f.info}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
